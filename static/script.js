@@ -1,6 +1,5 @@
-// If the page is served by FastAPI itself (port 8000) use a relative URL,
-// otherwise (Live Server, file://, etc.) call the API directly.
-const API_BASE = location.port === "8000" ? "" : "http://127.0.0.1:8000";
+// Use the same origin for both local and deployed environments
+const API_BASE = "";
 const API_URL = `${API_BASE}/predict`;
 
 const form = document.getElementById("loanForm");
